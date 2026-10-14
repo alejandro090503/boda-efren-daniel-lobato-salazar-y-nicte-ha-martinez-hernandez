@@ -911,6 +911,36 @@ body{font-size:17px}
 .lsb-body.landed{animation:lsbBreathe 3.6s ease-in-out infinite}
 @keyframes lsbBreathe{0%,100%{transform:scale(1)}50%{transform:scale(1.025)}}
 @media(prefers-reduced-motion:reduce){.lsb-body.landed,.lsb-tap-hint.show,#regalos h2,.lsb-title{animation:none!important}}
+
+/* ── DRESS CODE (de boda-jeffersson-y-vanessa) ── */
+.jdc-orn{display:flex;align-items:center;justify-content:center;gap:8px;margin:16px auto 0}
+.jdc-orn-line{width:60px;height:1px;background:linear-gradient(90deg,transparent,#B8962E,transparent)}
+.jdc-orn-d{width:8px;height:8px;background:#D4AF37;transform:rotate(45deg)}
+.jdc-orn-dsm{width:5px;height:5px;border:1px solid #B8962E;transform:rotate(45deg)}
+.jdc-figs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:32px auto 28px;max-width:340px;position:relative}
+.jdc-figs::before{content:'';position:absolute;left:50%;top:14%;bottom:14%;width:1px;background:linear-gradient(to bottom,transparent,rgba(97,108,0,.4),transparent)}
+.jdc-fig{display:flex;flex-direction:column;align-items:center;gap:14px;padding:8px 6px;background:transparent;position:relative}
+.jdc-fig::before{content:'';position:absolute;top:4px;left:50%;width:148%;height:230px;transform:translateX(-50%) scale(.94);border-radius:50%;background:radial-gradient(ellipse at center,rgba(255,250,232,.95) 0%,rgba(247,231,206,.65) 30%,rgba(212,175,55,.24) 56%,rgba(97,108,0,0) 78%);filter:blur(17px);z-index:0;pointer-events:none;animation:jdcGlowPulse 5.6s ease-in-out infinite}
+.jdc-fig:nth-child(2)::before{animation-delay:-2.8s}
+@keyframes jdcGlowPulse{0%,100%{opacity:.42;transform:translateX(-50%) scale(.94)}50%{opacity:1;transform:translateX(-50%) scale(1.07)}}
+.jdc-fig img{display:block;filter:drop-shadow(0 6px 16px rgba(20,16,10,.16));position:relative;z-index:1;height:215px;width:auto;max-width:100%;object-fit:contain;animation:jdcFloat 4.8s ease-in-out infinite}
+.jdc-fig:nth-child(2) img{animation-delay:-2.4s}
+@keyframes jdcFloat{0%,100%{translate:0 0}50%{translate:0 -10px}}
+@media(prefers-reduced-motion:reduce){.jdc-fig::before,.jdc-fig img{animation:none!important}}
+.jdc-fig-ttl{position:relative;z-index:1;font-family:'Cormorant Garamond',serif;font-weight:700;font-size:16px;letter-spacing:.28em;text-transform:uppercase;color:#7A5F12;line-height:1}
+.jdc-avoid-wrap{margin:8px auto 0;max-width:340px}
+.jdc-avoid-head{display:flex;align-items:center;justify-content:center;gap:9px;margin-bottom:8px}
+.jdc-avoid-lbl{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:16px;letter-spacing:.3em;text-transform:uppercase;color:#7A5F12}
+.jdc-avoid-lbl strong{color:#b4271a;font-weight:700}
+.jdc-avoid-clarify{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;font-weight:500;color:var(--ink);text-align:center;line-height:1.6;max-width:300px;margin:0 auto 18px}
+.jdc-avoid-clarify strong{color:#b4271a;font-style:normal;font-weight:700}
+.jdc-avoid-row{display:flex;justify-content:center;gap:18px;margin-bottom:18px}
+.jdc-avoid-sw{display:flex;flex-direction:column;align-items:center;gap:8px}
+.jdc-avoid-circle{width:38px;height:38px;border-radius:50%;box-shadow:0 2px 10px rgba(28,26,23,.15),inset 0 1px 2px rgba(255,255,255,.3);position:relative}
+.jdc-avoid-circle::after{content:'';position:absolute;inset:-3px;border-radius:50%;border:1px solid rgba(97,108,0,.3)}
+.jdc-avoid-circle.x::before{content:'';position:absolute;inset:0;border-radius:50%;background:linear-gradient(45deg,transparent 46%,rgba(180,39,26,.85) 46%,rgba(180,39,26,.85) 54%,transparent 54%);z-index:2}
+.jdc-avoid-name{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:16px;color:var(--ink)}
+.jdc-avoid-msg{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;font-weight:500;color:var(--ink);text-align:center;line-height:1.7;max-width:300px;margin:0 auto}
 </style>
 </head>
 <body>
@@ -995,8 +1025,8 @@ body{font-size:17px}
     <div class="sec-flora" style="background-image:url('botanica1.webp');opacity:.09"></div>
     <div class="sec-inner rv">
       <div class="verse-wrap">
-        <div class="logo-shiny" style="width:150px;margin:0 auto 6px">
-          <img src="logo-sm.png" alt="N&amp;E" style="width:100%;display:block">
+        <div class="logo-shiny" style="width:190px;margin:0 auto 10px">
+          <img src="logo-sm.png?v=2" alt="N&amp;E" style="width:100%;display:block">
         </div>
         <div style="font-family:var(--sans);font-size:11px;letter-spacing:.45em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;padding-left:.45em;margin-bottom:28px">Nicte-ha &amp; Efrén</div>
         <svg class="verse-ornament" viewBox="0 0 320 70" fill="none" aria-hidden="true">
@@ -1279,77 +1309,34 @@ body{font-size:17px}
   <div class="seam" style="--from:var(--bg);--to:var(--bg)" aria-hidden="true"></div>
 
   <!-- ════════════════ DRESS CODE (portado de boda-fabiola-y-fernando) ════════════════ -->
-  <section class="sec" id="dresscode" aria-label="Código de vestimenta">
-    <svg class="dc-heart" style="top:26%;right:-40px;transform:rotate(14deg);width:140px;height:140px" viewBox="0 0 100 100" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M50 84 C30 70 10 55 10 34 C10 22 20 13 31 13 C40 13 46 17 50 23 C54 17 60 13 69 13 C80 13 90 22 90 34 C90 55 70 70 50 84 Z"/></svg>
-    <svg class="dc-heart" style="top:60%;left:-34px;transform:rotate(-20deg);width:100px;height:100px" viewBox="0 0 100 100" aria-hidden="true" fill="currentColor"><path d="M50 84 C30 70 10 55 10 34 C10 22 20 13 31 13 C40 13 46 17 50 23 C54 17 60 13 69 13 C80 13 90 22 90 34 C90 55 70 70 50 84 Z"/></svg>
-    <svg class="dc-heart" style="top:14%;left:12%;transform:rotate(18deg);width:34px;height:34px" viewBox="0 0 100 100" aria-hidden="true" fill="currentColor"><path d="M50 84 C30 70 10 55 10 34 C10 22 20 13 31 13 C40 13 46 17 50 23 C54 17 60 13 69 13 C80 13 90 22 90 34 C90 55 70 70 50 84 Z"/></svg>
-    <svg class="dc-heart" style="top:84%;right:16%;transform:rotate(-15deg);width:40px;height:40px" viewBox="0 0 100 100" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M50 84 C30 70 10 55 10 34 C10 22 20 13 31 13 C40 13 46 17 50 23 C54 17 60 13 69 13 C80 13 90 22 90 34 C90 55 70 70 50 84 Z"/></svg>
+  <section id="dresscode" class="sec" style="text-align:center;background:#FDFFFC">
     <div class="sec-inner">
-      <div class="eyebrow rv">Código de vestimenta</div>
-      <h2 class="rv">Formal</h2>
-      <div class="dc-orn rv" aria-hidden="true">
-        <i></i>
-        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2">
-          <circle cx="20" cy="20" r="4"/><circle cx="20" cy="20" r="2"/>
-          <path d="M12 20 Q15 13 20 16" stroke-linecap="round"/><path d="M28 20 Q25 13 20 16" stroke-linecap="round"/>
-          <path d="M12 20 Q15 27 20 24" stroke-linecap="round"/><path d="M28 20 Q25 27 20 24" stroke-linecap="round"/>
-        </svg>
-        <i></i>
+    <div class="eyebrow">Código de Vestimenta</div>
+    <h2>Formal</h2>
+    <div class="jdc-orn"><span class="jdc-orn-line"></span><span class="jdc-orn-dsm"></span><span class="jdc-orn-d"></span><span class="jdc-orn-dsm"></span><span class="jdc-orn-line"></span></div>
+
+    <div class="jdc-figs rv">
+      <div class="jdc-fig">
+        <img src="caballero.png" alt="Caballero de etiqueta — traje formal negro" loading="lazy">
+        <span class="jdc-fig-ttl">Caballeros</span>
       </div>
-      <p class="dc-note rv">Acompáñanos vestido para la ocasión</p>
-
-      <div class="dc-looks rv">
-        <button class="dc-look" type="button" data-look="caballeros" aria-label="Ver ideas de vestimenta para caballeros">
-          <span class="dc-look-ico" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M8 3l4 3 4-3 3 2.2c1.2.9 1.9 2.3 1.9 3.8V21H3V9c0-1.5.7-2.9 1.9-3.8L8 3z"/>
-              <path d="M12 6v15"/><path d="M9.4 4.2L12 9l2.6-4.8"/>
-            </svg>
-          </span>
-          <span class="dc-look-txt">
-            <span class="dc-look-rol">Caballeros</span>
-            <span class="dc-look-cta">Ver ideas</span>
-          </span>
-          <span class="dc-look-arrow" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
-          </span>
-        </button>
-
-        <button class="dc-look" type="button" data-look="damas" aria-label="Ver ideas de vestimenta para damas">
-          <span class="dc-look-ico" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M9 3h6l-1.4 5.2L21 21H3l7.4-12.8L9 3z"/><path d="M10.6 8.2h2.8"/>
-            </svg>
-          </span>
-          <span class="dc-look-txt">
-            <span class="dc-look-rol">Damas</span>
-            <span class="dc-look-cta">Ver ideas</span>
-          </span>
-          <span class="dc-look-arrow" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
-          </span>
-        </button>
+      <div class="jdc-fig">
+        <img src="dama.png" alt="Dama de gala — vestido largo" loading="lazy">
+        <span class="jdc-fig-ttl">Damas</span>
       </div>
-
-      <p class="dc-avoid rv">Por favor evita el color blanco, reservado para la novia.</p>
     </div>
 
-    <div class="dc-viewer" id="dcViewer" role="dialog" aria-modal="true" aria-label="Ideas de vestimenta" hidden>
-      <div class="dcv-box">
-        <button class="dc-viewer-close" id="dcViewerClose" type="button" aria-label="Cerrar">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
-        </button>
-        <p class="dcv-head" id="dcvHead"></p>
-        <div class="dcv-viewport"><div class="dcv-track" id="dcvTrack"></div></div>
-        <button class="dcv-nav dcv-prev" id="dcvPrev" type="button" aria-label="Anterior">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg>
-        </button>
-        <button class="dcv-nav dcv-next" id="dcvNext" type="button" aria-label="Siguiente">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
-        </button>
-        <p class="dcv-cap" id="dcvCap"></p>
-        <div class="dcv-dots" id="dcvDots"></div>
+    <div class="jdc-avoid-wrap rv">
+      <div class="jdc-avoid-head">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" stroke="#b4271a" stroke-width="1.7"/><path d="M5.4 5.4 L18.6 18.6" stroke="#b4271a" stroke-width="1.7"/></svg>
+        <span class="jdc-avoid-lbl">Tono a <strong>evitar</strong></span>
       </div>
+      <p class="jdc-avoid-clarify">Este <u>no</u> es un color sugerido. Con cariño, te pedimos <strong>no</strong> usarlo en tu vestuario.</p>
+      <div class="jdc-avoid-row">
+        <div class="jdc-avoid-sw"><div class="jdc-avoid-circle x" style="background:#FFFFFF;border:1px solid #ddd"></div><span class="jdc-avoid-name">Blanco</span></div>
+      </div>
+      <p class="jdc-avoid-msg">El blanco está reservado para la novia.</p>
+    </div>
     </div>
   </section>
 
