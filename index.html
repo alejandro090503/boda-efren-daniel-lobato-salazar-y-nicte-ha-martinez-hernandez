@@ -941,6 +941,73 @@ body{font-size:17px}
 .jdc-avoid-circle.x::before{content:'';position:absolute;inset:0;border-radius:50%;background:linear-gradient(45deg,transparent 46%,rgba(180,39,26,.85) 46%,rgba(180,39,26,.85) 54%,transparent 54%);z-index:2}
 .jdc-avoid-name{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:16px;color:var(--ink)}
 .jdc-avoid-msg{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;font-weight:500;color:var(--ink);text-align:center;line-height:1.7;max-width:300px;margin:0 auto}
+
+/* ============ v4 — TODO CLARO (pedido de los novios: sin saltos oscuro→claro) ============ */
+/* Portada clara */
+.hero{background-color:#F6EEDD}
+.hero-bg{filter:blur(22px) saturate(.75) brightness(1.15)!important}
+.hero-bg-overlay{background:
+  radial-gradient(ellipse at 50% 30%,rgba(255,253,246,.35),transparent 70%),
+  linear-gradient(180deg,rgba(253,255,252,.78) 0%,rgba(250,245,233,.62) 40%,rgba(247,238,221,.8) 82%,#F6EEDD 100%)!important}
+.hero-content{color:var(--ink)}
+.hero-invitation{color:#4F5800!important;text-shadow:none!important}
+.hero-name{color:#3E4500!important;text-shadow:none!important}
+.hero-and{color:#B8962E!important;text-shadow:none!important}
+.hero-date{color:#3E4500!important;font-family:'Cormorant Garamond',serif!important;font-weight:700!important}
+.hero-year{color:#9A7B1C!important;text-shadow:none!important;font-family:'Cormorant Garamond',serif!important;font-weight:600!important}
+.hero-place{color:#4F5800!important;font-weight:700!important}
+.hero-ornament-top g{stroke:#B8962E}
+.hero-spot{background:radial-gradient(ellipse 45% 55% at 50% 45%,rgba(255,255,255,.7),rgba(255,248,230,.25) 45%,transparent 70%)!important}
+.hero-mat{box-shadow:0 22px 44px rgba(62,69,0,.22),0 0 0 1px #B8962E,0 0 0 4px rgba(212,175,55,.3)!important}
+
+/* Secciones que eran oscuras → champán claro */
+.sec-dark,.gallery,footer{background:#F6EEDD!important}
+.sec-dark .eyebrow,.gallery .eyebrow{color:#7A5F12!important}
+.sec-dark h2,.gallery h2{color:#3E4500!important}
+.sec-dark h2 em,.gallery h2 em{color:#9A7B1C!important}
+.gallery-sub{color:#9A7B1C!important}
+.sec-dark .italiana{color:#7A5F12!important}
+.gift-msg-dark,.album-aviso{color:#4F5800!important}
+.sec-dark .album-icon-wrap svg *{stroke:#B8962E}
+.album-qr-frame{background:#fff!important;box-shadow:0 10px 26px rgba(62,69,0,.14),0 0 0 1px rgba(212,175,55,.55)!important}
+.loc-card{box-shadow:0 14px 34px rgba(62,69,0,.12)!important}
+.loc-photo{box-shadow:0 0 0 1px rgba(212,175,55,.55),0 10px 24px rgba(62,69,0,.18),0 0 22px rgba(212,175,55,.2)!important}
+.wheel-card{box-shadow:0 0 0 1.5px #D4AF37,0 0 0 5px rgba(255,255,255,.7),0 14px 30px rgba(62,69,0,.22)!important;-webkit-box-reflect:below 10px linear-gradient(transparent 60%,rgba(255,255,255,.35))!important}
+.gal-hint{color:#7A5F12!important;opacity:.9!important;font-weight:600}
+footer::before{display:none}
+.footer-names{color:#3E4500!important}
+.footer-names .amp{color:#B8962E!important}
+.footer-date{color:#4F5800!important;font-weight:700!important}
+.footer-credit{color:#9A7B1C!important}
+
+/* Cuenta regresiva: simple y clara */
+.date-hero{background:#F6EEDD!important;color:var(--ink)!important}
+.date-hero::after{background:radial-gradient(ellipse 70% 50% at 50% 50%,rgba(212,175,55,.10),transparent 70%)!important;-webkit-mask-image:none!important;mask-image:none!important}
+.date-hero::before{border-color:rgba(184,150,46,.3)!important}
+.date-eyebrow{color:#7A5F12!important;font-weight:700!important}
+.date-h{color:#3E4500!important}
+.date-h em{color:#9A7B1C!important}
+.date-num{color:#3E4500!important}
+.date-lbl{color:#4F5800!important;font-weight:700!important}
+.date-block+.date-block::before{color:#B8962E!important}
+.cd-block{border-radius:14px!important;aspect-ratio:auto!important;padding:22px 6px 18px!important;
+  background:#fff!important;border:1px solid rgba(212,175,55,.55)!important;
+  box-shadow:0 8px 22px rgba(62,69,0,.10)!important}
+.cd-num{font-size:clamp(34px,9vw,44px)!important;color:#3E4500!important;-webkit-text-fill-color:#3E4500!important}
+.cd-lbl{color:#7A5F12!important;font-size:12px!important}
+@media (max-width:480px){.cd-block{flex:1 1 0!important;width:auto}}
+.save-date-btn{box-shadow:0 8px 20px rgba(122,95,18,.22)!important}
+
+/* Reloj de clima en claro */
+.weather-card{background:linear-gradient(160deg,#FFFFFF,#FBF5E8) padding-box,linear-gradient(135deg,#F7E7CE,#D4AF37 35%,#B8962E 60%,#F7E7CE) border-box!important;
+  box-shadow:0 16px 34px rgba(62,69,0,.12)!important;color:var(--ink)!important}
+.weather-card::before{background:radial-gradient(circle at 85% 0%,rgba(212,175,55,.16),transparent 55%)!important}
+.wx-eyebrow{color:#7A5F12!important;font-weight:700!important}
+.wx-time{background:linear-gradient(180deg,#4F5800,#3E4500)!important;-webkit-background-clip:text!important;background-clip:text!important}
+.wx-day,.wx-desc{color:#4F5800!important}
+.wx-temp{background:linear-gradient(180deg,#B8962E,#7A5F12)!important;-webkit-background-clip:text!important;background-clip:text!important}
+.wx-icon svg{color:#B8962E!important}
+.wx-note{color:#4F5800!important;border-top-color:rgba(184,150,46,.35)!important}
 </style>
 </head>
 <body>
@@ -1018,7 +1085,7 @@ body{font-size:17px}
     <div class="hero-scroll" aria-label="Desliza para continuar">Desliza</div>
   </section>
 
-  <div class="seam" style="--from:#262B0E;--to:var(--bg)" aria-hidden="true"></div>
+  <div class="seam" style="--from:#F6EEDD;--to:var(--bg)" aria-hidden="true"></div>
 
   <!-- ════════════════ INVITACIÓN ════════════════ -->
   <section class="sec section-bg" style="padding-top:52px;padding-bottom:min(12vh,96px);background:#FDFFFC;overflow:hidden">
@@ -1045,32 +1112,12 @@ body{font-size:17px}
     </div>
   </section>
 
-  <div class="seam" style="--from:var(--bg);--to:#2B2F00" aria-hidden="true"></div>
+  <div class="seam" style="--from:var(--bg);--to:#F6EEDD" aria-hidden="true"></div>
 
   <!-- ════════════════ COUNTDOWN (combinado) ════════════════ -->
   <section class="date-hero">
     <div class="dh-inner">
       <div class="date-eyebrow rv">Cuenta Regresiva</div>
-      <div class="old-clock rv" aria-hidden="true">
-        <svg viewBox="0 0 220 300" class="oc-svg">
-          <defs>
-            <linearGradient id="ocGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F7E7CE"/><stop offset=".45" stop-color="#D4AF37"/><stop offset="1" stop-color="#8A6D14"/></linearGradient>
-            <radialGradient id="ocFace" cx=".5" cy=".42" r=".6"><stop offset="0" stop-color="#FFFDF6"/><stop offset="1" stop-color="#EFE1C4"/></radialGradient>
-          </defs>
-          <path d="M110 6 C126 6 132 18 128 26 L92 26 C88 18 94 6 110 6Z" fill="url(#ocGold)"/>
-          <circle cx="110" cy="110" r="88" fill="url(#ocGold)"/>
-          <circle cx="110" cy="110" r="80" fill="#3E4500"/>
-          <circle cx="110" cy="110" r="76" fill="url(#ocFace)"/>
-          <circle cx="110" cy="110" r="66" fill="none" stroke="#B8962E" stroke-width=".8" opacity=".6"/>
-          <g id="oc-ticks"></g>
-          <g font-family="Cormorant Garamond,serif" font-weight="600" font-size="15" fill="#3E4500" text-anchor="middle" id="oc-nums"></g>
-          <g id="oc-hour"><path d="M110 112 L106 110 L110 62 L114 110Z" fill="#2B2F00"/></g>
-          <g id="oc-min"><path d="M110 114 L107.5 110 L110 44 L112.5 110Z" fill="#2B2F00"/></g>
-          <g id="oc-sec"><line x1="110" y1="124" x2="110" y2="40" stroke="#B8962E" stroke-width="1.2"/></g>
-          <circle cx="110" cy="110" r="4.5" fill="url(#ocGold)"/>
-          <g class="oc-pendulum"><rect x="108.8" y="198" width="2.4" height="70" fill="#D4AF37"/><circle cx="110" cy="276" r="14" fill="url(#ocGold)"/><circle cx="110" cy="276" r="8" fill="none" stroke="#7A5F12" stroke-width=".8"/></g>
-        </svg>
-      </div>
       <div class="countdown-grid rv" id="cd" style="margin-top:4px">
         <div class="cd-block"><div class="cd-num" id="cd-d">000</div><div class="cd-lbl">Días</div></div>
         <div class="cd-block"><div class="cd-num" id="cd-h">00</div><div class="cd-lbl">Horas</div></div>
@@ -1095,7 +1142,7 @@ body{font-size:17px}
     </div>
   </section>
 
-  <div class="seam" style="--from:#2B2F00;--to:var(--bg)" aria-hidden="true"></div>
+  <div class="seam" style="--from:#F6EEDD;--to:var(--bg)" aria-hidden="true"></div>
 
   <!-- ════════════════ FAMILIAS ════════════════ -->
   <section class="sec section-bg" style="text-align:center;background:#FDFFFC">
@@ -1132,7 +1179,7 @@ body{font-size:17px}
     </div>
   </section>
 
-  <div class="seam" style="--from:#FDFFFC;--to:#2B2F00" aria-hidden="true"></div>
+  <div class="seam" style="--from:#FDFFFC;--to:#F6EEDD" aria-hidden="true"></div>
 
   <!-- ════════════════ UBICACIÓN ════════════════ -->
   <section class="sec sec-dark" style="text-align:center;overflow:hidden">
@@ -1192,7 +1239,7 @@ body{font-size:17px}
     </div>
   </section>
 
-  <div class="seam" style="--from:#2B2F00;--to:#FDFFFC" aria-hidden="true"></div>
+  <div class="seam" style="--from:#F6EEDD;--to:#FDFFFC" aria-hidden="true"></div>
 
   
 
@@ -1225,7 +1272,6 @@ body{font-size:17px}
           <div class="itin-text itin-text--right">
             <span class="itin-time">03:00 PM</span>
             <div class="itin-ev">Recepción de invitados y cóctel de bienvenida</div>
-            <div class="itin-place">Con música en vivo</div>
           </div>
         </div>
 
@@ -1233,7 +1279,6 @@ body{font-size:17px}
           <div class="itin-text itin-text--left">
             <span class="itin-time">04:30 PM</span>
             <div class="itin-ev">Banquete nupcial</div>
-            <div class="itin-place">Acompañado de música en vivo</div>
           </div>
           <div class="itin-icon-wrap">
             <svg viewBox="0 0 24 24"><path d="M3 11h18M5 7h14l1 4H4l1-4zM6 11v6a2 2 0 002 2h8a2 2 0 002-2v-6"/></svg>
@@ -1242,63 +1287,52 @@ body{font-size:17px}
 
         <div class="itin-item rv">
           <div class="itin-icon-wrap">
-            <svg viewBox="0 0 24 24"><rect x="5" y="12" width="14" height="8" rx="1"/><rect x="7" y="7" width="10" height="5" rx="1"/><path d="M12 3v4"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M3 10c3-4 15-4 18 0"/><path d="M5 10c0 2 3 3 7 3s7-1 7-3"/><path d="M12 13v3"/><path d="M7 21l2-5h6l2 5"/></svg>
           </div>
           <div class="itin-text itin-text--right">
-            <span class="itin-time">06:30 PM</span>
-            <div class="itin-ev">Apertura de la mesa de postres y pastel</div>
-          </div>
-        </div>
-
-        <div class="itin-item rv">
-          <div class="itin-text itin-text--left">
             <span class="itin-time">07:00 PM</span>
             <div class="itin-ev">Mariachi</div>
           </div>
-          <div class="itin-icon-wrap">
-            <svg viewBox="0 0 24 24"><path d="M3 10c3-4 15-4 18 0"/><path d="M5 10c0 2 3 3 7 3s7-1 7-3"/><path d="M12 13v3"/><path d="M7 21l2-5h6l2 5"/></svg>
-          </div>
         </div>
 
         <div class="itin-item rv">
+          <div class="itin-text itin-text--left">
+            <span class="itin-time">09:30 PM</span>
+            <div class="itin-ev">Apertura de pista</div>
+          </div>
           <div class="itin-icon-wrap">
             <svg viewBox="0 0 24 24"><path d="M9 18V6l12-2v12"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
           </div>
-          <div class="itin-text itin-text--right">
-            <span class="itin-time">09:30 PM</span>
-            <div class="itin-ev">Apertura de pista</div>
-            <div class="itin-place">Con música en vivo</div>
-          </div>
         </div>
 
         <div class="itin-item rv">
-          <div class="itin-text itin-text--left">
-            <span class="itin-time">10:30 PM</span>
-            <div class="itin-ev">Tornafiesta</div>
-          </div>
           <div class="itin-icon-wrap">
             <svg viewBox="0 0 24 24"><path d="M12 3v1m0 16v1m-8-9H3m18 0h-1M5.6 5.6l.7.7m11.4 11.4l.7.7M5.6 18.4l.7-.7m11.4-11.4l.7-.7"/><circle cx="12" cy="12" r="4"/></svg>
           </div>
-        </div>
-
-        <div class="itin-item rv">
-          <div class="itin-icon-wrap">
-            <svg viewBox="0 0 24 24"><circle cx="8" cy="4" r="2"/><circle cx="16" cy="4" r="2"/><path d="M8 7c-2 1-3 4-2 7l2 5M16 7c2 1 3 4 2 7l-2 5"/><path d="M10 10l4-1"/></svg>
-          </div>
           <div class="itin-text itin-text--right">
-            <span class="itin-time">11:00 PM</span>
-            <div class="itin-ev">Pista activa y baile</div>
+            <span class="itin-time">10:30 PM</span>
+            <div class="itin-ev">Tornafiesta</div>
           </div>
         </div>
 
         <div class="itin-item rv">
           <div class="itin-text itin-text--left">
+            <span class="itin-time">11:00 PM</span>
+            <div class="itin-ev">Pista activa y baile</div>
+          </div>
+          <div class="itin-icon-wrap">
+            <svg viewBox="0 0 24 24"><circle cx="8" cy="4" r="2"/><circle cx="16" cy="4" r="2"/><path d="M8 7c-2 1-3 4-2 7l2 5M16 7c2 1 3 4 2 7l-2 5"/><path d="M10 10l4-1"/></svg>
+          </div>
+        </div>
+
+        <div class="itin-item rv">
+          <div class="itin-icon-wrap">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5z"/></svg>
+          </div>
+          <div class="itin-text itin-text--right">
             <span class="itin-time">12:00 AM – 02:00 AM</span>
             <div class="itin-ev">Gran cierre</div>
             <div class="itin-place">Con banda en vivo</div>
-          </div>
-          <div class="itin-icon-wrap">
-            <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5z"/></svg>
           </div>
         </div>
 
@@ -1340,7 +1374,7 @@ body{font-size:17px}
     </div>
   </section>
 
-  <div class="seam" style="--from:#FDFFFC;--to:#2B2F00" aria-hidden="true"></div>
+  <div class="seam" style="--from:#FDFFFC;--to:#F6EEDD" aria-hidden="true"></div>
 
   <!-- ════════════════ GALERÍA — RUEDA 3D ════════════════ -->
   <section class="gallery">
@@ -1361,7 +1395,7 @@ body{font-size:17px}
     <p class="gal-hint rv">arrastra para girar</p>
   </section>
 
-  <div class="seam" style="--from:#2B2F00;--to:#FDFFFC" aria-hidden="true"></div>
+  <div class="seam" style="--from:#F6EEDD;--to:#FDFFFC" aria-hidden="true"></div>
 
   <!-- ════════════════ MESA DE REGALOS · LLUVIA DE SOBRES (portado de boda-jeffersson-y-vanessa) ════════════════ -->
   <section id="regalos" class="sec">
@@ -1415,7 +1449,7 @@ body{font-size:17px}
     </div>
   </section>
 
-  <div class="seam" style="--from:#FDFFFC;--to:#2B2F00" aria-hidden="true"></div>
+  <div class="seam" style="--from:#FDFFFC;--to:#F6EEDD" aria-hidden="true"></div>
 
   <!-- ════════════════ ÁLBUM COMPARTIDO ════════════════ -->
   <section class="sec sec-dark" style="text-align:center;overflow:hidden">
@@ -1457,7 +1491,7 @@ body{font-size:17px}
     </div>
   </section>
 
-  <div class="seam" style="--from:#2B2F00;--to:#FDFFFC" aria-hidden="true"></div>
+  <div class="seam" style="--from:#F6EEDD;--to:#FDFFFC" aria-hidden="true"></div>
 
   
 
