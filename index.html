@@ -16,7 +16,7 @@
 <meta name="twitter:image" content="https://boda-nicte-ha-y-efren.vercel.app/og-image.jpg?v=3">
 
 <link rel="preload" as="image" href="hero-paper.jpg" fetchpriority="high">
-<link rel="preload" as="image" href="hero.jpg">
+<link rel="preload" as="image" href="hero-quill.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Pinyon+Script&family=Italiana&display=swap" rel="stylesheet">
@@ -1029,6 +1029,22 @@ footer::before{display:none}
 .hero-date{margin-top:30px!important;font-size:15px!important;letter-spacing:.3em!important;color:#4F5800!important}
 .hero-year{font-size:28px!important;letter-spacing:.32em!important;margin-top:14px!important;color:#9A7B1C!important}
 .hero-place{margin-top:26px!important;font-family:'Cormorant Garamond',serif!important;font-size:13px!important;letter-spacing:.3em!important;color:#4F5800!important}
+
+/* v7 — cuadrito quilling centrado y girado como su referencia; textos con halo para no encimarse con las hojas */
+.hero-art{transform:none!important;width:min(56vw,220px)!important;margin:0 auto 34px!important}
+@keyframes heroTilt{0%,100%{rotate:12deg;translate:0 0}50%{rotate:10deg;translate:0 -6px}}
+.hero-mat{border-radius:3px!important;box-shadow:0 16px 26px rgba(62,69,0,.22),0 3px 8px rgba(62,69,0,.18)!important}
+.hero-art-in{border-radius:3px!important}
+.hero-content>*:not(.hero-art){position:relative;z-index:1}
+.hero-content{position:relative}
+.hero-content::before{content:"";position:absolute;left:50%;top:calc(min(56vw,220px) + 70px);bottom:30px;width:118%;transform:translateX(-50%);z-index:0;pointer-events:none;
+  background:radial-gradient(ellipse 50% 50% at 50% 50%,rgba(246,242,228,.97) 55%,rgba(246,242,228,.85) 72%,rgba(246,242,228,0) 100%)}
+.hero-invitation,.hero-date,.hero-place{max-width:290px;margin-left:auto!important;margin-right:auto!important}
+
+.hero-content{padding:36px 34px 150px!important}
+.hero-hang{rotate:10deg}
+.hero-art{margin-bottom:40px!important}
+.hero-date{margin-top:22px!important}.hero-year{margin-top:8px!important}.hero-place{margin-top:16px!important}
 </style>
 </head>
 <body>
@@ -1085,7 +1101,7 @@ footer::before{display:none}
       <div class="hero-art">
         <div class="hero-hang">
           <div class="hero-mat">
-            <div class="hero-art-in"><img src="hero.jpg" alt="Nicte-ha y Efrén en su cuadro de madera"><span class="hero-sheen" aria-hidden="true"></span></div>
+            <div class="hero-art-in"><img src="hero-quill.jpg" alt="Nicte-ha y Efrén en papel quilling"><span class="hero-sheen" aria-hidden="true"></span></div>
           </div>
         </div>
       </div>
