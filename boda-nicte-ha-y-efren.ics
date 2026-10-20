@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Elysium Invitaciones//ES
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:nicte-ha-efren-20270109@elysium
+DTSTAMP:20261019T000000Z
+DTSTART:20270109T190000Z
+DTEND:20270110T080000Z
+SUMMARY:Boda Nicte-ha & Efrén
+LOCATION:Parroquia de San Antonio de Padua\, Teoloyucan\, Edo. de México
+DESCRIPTION:Ceremonia religiosa 1:00 PM - Parroquia de San Antonio de Padua.
+Recepción 3:00 PM - Jardín de Eventos Margarita.
+https://boda-nicte-ha-y-efren.vercel.app
+URL:https://boda-nicte-ha-y-efren.vercel.app
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Mañana es la boda de Nicte-ha & Efrén
+END:VALARM
+END:VEVENT
+END:VCALENDAR
