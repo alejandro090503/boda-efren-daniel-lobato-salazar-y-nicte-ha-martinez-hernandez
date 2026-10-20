@@ -1677,7 +1677,11 @@ function launchInvitation(){
 
   function startMusic(){
     if(!bgMusic) return;
-    try{ bgMusic.currentTime=0; }catch(e){}
+    /* La cancion ya arranco con el toque al sobre (AUDIO v2): no reiniciarla, seguir de corrido. */
+    if(!bgMusic.paused && bgMusic.currentTime>0){
+      if(vinylBtn) vinylBtn.classList.add('is-ready');
+      return;
+    }
     bgMusic.volume=0;
     bgMusic.play().catch(()=>{});
     gsap.to(bgMusic,{volume:.45,duration:3,ease:'power1.inOut'});
